@@ -1,0 +1,54 @@
+body{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+@keyframes chanje{
+    from{
+        background-color: aquamarine;
+        box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.4);
+    }to{
+        background-color: antiquewhite;
+        box-shadow: 5px 5px 2px rgba(0,0,0,0.5);
+        
+    }
+}
+
+.button{
+    width: 150px;
+    height: 13vh;
+    border: none;
+    border-radius: 20px;
+    background-color: aquamarine;
+    box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.2);
+    
+}
+.button:hover{
+    animation-name: chanje;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    
+}
+
+.loading::before{
+    width: 100%;
+    margin: 0;
+    padding-left: 35px;
+    padding-right: 45px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    content: "Click";
+    font-size: 30px;
+    font-weight: 500;
+}
+.loading:hover::before ,button:hover{
+    text-align: center;
+    content: "loading...";
+    font-weight: 600;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 0;
+    width: 100%;
+}
